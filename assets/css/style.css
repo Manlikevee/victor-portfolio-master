@@ -509,7 +509,19 @@ body.nav-active { overflow: hidden; }
 .project-card .card-title { margin-block: 16px; }
 
 .project-card .card-text { margin-block-end: 20px; }
+.project-card .card-text{ 
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;
 
+}
+
+.logo img{
+  width: 120px;
+  object-fit: contain;
+}
 .project-card .btn-text {
   display: flex;
   align-items: center;
@@ -518,7 +530,58 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
+.imagegrid{
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  margin-bottom: 20px;
+}
+
+.imagegrid img{
+
+  height: 40px;
+  object-fit: contain;
+}
 .project-card .btn-text:is(:hover, :focus-visible) { gap: 10px; }
+
+.btn-text{
+  width: fit-content !important;
+}
+
+.swap-on-hover {
+  position: relative;	
+	margin:  0 auto;
+	max-width: 400px;
+}
+
+
+.swap-on-hover img {
+  position: absolute;
+  top:0;
+  left:0;
+	overflow: hidden;
+	/* Sets the width and height for the images*/
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity .5s linear;
+  cursor: pointer;
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.swap-on-hover:hover > .swap-on-hover__front-image{
+  opacity: 0;
+}
+
+
+
 
 
 
@@ -600,8 +663,11 @@ textarea.input-field {
 
 
   /**
-   * PROJECT
+   * PROJECT.ca
+
+
    */
+
 
   .project-card { --padding: 38px; }
 
