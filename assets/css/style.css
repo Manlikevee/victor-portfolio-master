@@ -996,3 +996,177 @@ textarea.input-field {
   .about .grid-list { gap: 60px; }
 
 }
+
+
+.portfoliogrid{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3rem;
+    width: 100%;
+    grid-auto-rows: 1fr;
+   
+
+  }
+.flx{
+  display: flex !important;
+  flex-direction: column;
+}
+  .portfoliocard{
+    background-color: white;
+padding: 2px;
+border-color: #e6e6e6;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+
+  }
+
+  .portfoliocard img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+.cardimg{
+  width: 100%;
+  border-radius: 9px;
+  background-color: red;
+  height: 200px;
+  background-image: url('../New\ folder/TATE.PNG');
+
+}
+  .cardimg img {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-position: top;
+    height: 200px;
+    transition: 8s all ease;
+  }
+  .cardimg img:hover {
+    object-position: bottom;
+  }
+  .portfoliocard .imagegrid {
+    width: 100%;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    margin-bottom: 0px;
+}
+  .portfoliocard .imagegrid img{
+    width: 30px;
+  }
+.liveprev,  .buy{
+background-color: white;
+color: #14281d;
+  text-align: center;
+  padding: 7px;
+  transition: 0.4s;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border: 1px solid #14281d;
+}
+
+.liveprev:hover{
+  background-color: #14281d;
+  color: white;
+}
+
+.buy:hover{
+  background-color: #4d4d4d;
+  color: white;
+}
+  .livepreview{
+    align-self: baseline;
+    margin-top: auto;
+    width: fit-content;
+    margin-left: auto;
+    padding: 3px;
+display: flex;
+gap: 5px;
+padding-top: 5px;
+align-items: center;
+  }
+  .portfoliocardtitle{
+ 
+    cursor: pointer;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+    color: #4d4d4d;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .cardbottom{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .odd .image-container img {
+    height: 350px;
+    object-fit: contain;
+
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-position: center top;
+        transition: all 15s ease 0s;
+}
+.odd .image-container img:hover {
+  object-position: bottom;
+}
+
+
+.odd{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+
+@media (min-width: 992px) {
+.odd .project-card-1, .project-card-2 {
+    flex-direction: row;
+    align-items: center;
+}
+figure.card-banner.revealed {
+  padding-block-end: var(--padding);
+}
+}
+
+
+.odd .image-container img {
+  border-radius: 9px;
+  filter:  brightness(0.9);
+  transition: 0.5s;  display: inline-block;
+  position: relative;
+}
+
+.image-container img:hover {
+  border-radius: 9px;
+  filter: brightness(1);
+  transition: 0.5s;
+}
+
+.image-container:hover::after {
+  background-image: none;
+}
+
+
