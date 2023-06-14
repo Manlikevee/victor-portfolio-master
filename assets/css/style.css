@@ -1169,4 +1169,16 @@ figure.card-banner.revealed {
   background-image: none;
 }
 
-
+@media screen and (max-width:600px) {
+  .odd .image-container img {
+    height: fit-content;
+    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-position: center top;
+    transition: all 15s ease 0s;
+}  
+  
+}
